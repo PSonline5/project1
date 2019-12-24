@@ -12,7 +12,7 @@ class Status(models.Model):
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)
 
     def __str__(self):
-        return f"Status {self.name}"
+        return "Status %s" % self.name
 
     class Meta:
         verbose_name = 'Order status'
@@ -32,7 +32,7 @@ class Order(models.Model):
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)
 
     def __str__(self):
-        return f"Order {self.id} {self.status.name}"
+        return "Order %s %s" % (self.id, self.status.name)
 
     class Meta:
         verbose_name = 'Order'
@@ -54,7 +54,7 @@ class ProductInOrder(models.Model):
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)
 
     def __str__(self):
-        return f"{self.product.name}"
+        return "%s" % self.product.name
 
     class Meta:
         verbose_name = 'Product in order'
@@ -99,7 +99,7 @@ class ProductInBasket(models.Model):
     updated = models.DateTimeField(auto_now_add=False, auto_now=True)
 
     def __str__(self):
-        return f"{self.product.name}"
+        return "%s" % self.product.name
 
     class Meta:
         verbose_name = 'Product in checkout'
