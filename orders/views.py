@@ -1,5 +1,5 @@
 from django.http import JsonResponse, HttpResponseRedirect
-from .models import *
+from .models import ProductInBasket, Order, ProductInOrder
 from django.shortcuts import render
 from .forms import CheckoutContactForm
 from django.contrib.auth.models import User
