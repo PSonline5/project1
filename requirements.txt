@@ -1,7 +1,7 @@
 Django==2.2.9
 Pillow==6.2.1
 asgiref==3.2.3
-pip==19.0.3
+pip==21.1
 pytz==2019.3
 setuptools==40.8.0
 sqlparse==0.3.0
